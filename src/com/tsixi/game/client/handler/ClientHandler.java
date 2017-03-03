@@ -1,9 +1,6 @@
 package com.tsixi.game.client.handler;
 
-import org.jboss.netty.channel.ChannelHandlerContext;
-import org.jboss.netty.channel.ChannelStateEvent;
-import org.jboss.netty.channel.MessageEvent;
-import org.jboss.netty.channel.SimpleChannelHandler;
+import org.jboss.netty.channel.*;
 
 /**
  * 描述：<br>
@@ -26,6 +23,7 @@ public class ClientHandler extends SimpleChannelHandler {
 
     @Override
     public void messageReceived(ChannelHandlerContext ctx, MessageEvent e) throws Exception {
-        super.messageReceived(ctx, e);
+        // Print out the line received from the server.
+        System.out.println(e.getMessage());
     }
 }
