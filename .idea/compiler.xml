@@ -12,7 +12,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="gameclient" target="1.7" />
-      <module name="LogicGameClient" target="1.7" />
+      <module name="LogicGameClient" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
