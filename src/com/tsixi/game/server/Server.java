@@ -46,7 +46,7 @@ public class Server {
                 pipeline.addLast("decoder", new StringDecoder());
                 pipeline.addLast("encoder", new StringEncoder());
 
-                // and then business logic.
+                // and then business logic handler
                 pipeline.addLast("handler", new ServerHandler());
 
                 return pipeline;
