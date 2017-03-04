@@ -8,6 +8,7 @@ import org.jboss.netty.handler.codec.frame.DelimiterBasedFrameDecoder;
 import org.jboss.netty.handler.codec.frame.Delimiters;
 import org.jboss.netty.handler.codec.string.StringDecoder;
 import org.jboss.netty.handler.codec.string.StringEncoder;
+import org.jboss.netty.handler.logging.LoggingHandler;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -41,6 +42,7 @@ public class Client {
 
                 // Add the text line codec combination first,
                 pipeline.addLast("framer", new DelimiterBasedFrameDecoder(8192, Delimiters.lineDelimiter()));
+                pipeline.addLast("logger",  new LoggingHandler());
                 pipeline.addLast("decoder", new StringDecoder());
                 pipeline.addLast("encoder", new StringEncoder());
 

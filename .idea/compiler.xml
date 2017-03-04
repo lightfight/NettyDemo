@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="gameclient" />
+        <module name="LogicGameClient" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="gameclient" target="1.7" />
+      <module name="LogicGameClient" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

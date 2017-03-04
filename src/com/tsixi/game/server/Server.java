@@ -10,6 +10,8 @@ import org.jboss.netty.handler.codec.frame.DelimiterBasedFrameDecoder;
 import org.jboss.netty.handler.codec.frame.Delimiters;
 import org.jboss.netty.handler.codec.string.StringDecoder;
 import org.jboss.netty.handler.codec.string.StringEncoder;
+import org.jboss.netty.handler.logging.LoggingHandler;
+import org.jboss.netty.logging.InternalLogLevel;
 
 import java.net.InetSocketAddress;
 import java.util.concurrent.Executors;
@@ -32,6 +34,7 @@ public class Server {
 
         // 设置一个处理客户端消息和各种消息事件的类(Handler)
         server.setPipelineFactory(new ChannelPipelineFactory() {
+
             @Override
             public ChannelPipeline getPipeline() throws Exception {
 
@@ -39,6 +42,7 @@ public class Server {
 
                 // Add the text line codec combination first,
                 pipeline.addLast("framer", new DelimiterBasedFrameDecoder(8192, Delimiters.lineDelimiter()));
+                pipeline.addLast("logger",  new LoggingHandler(InternalLogLevel.DEBUG));
                 pipeline.addLast("decoder", new StringDecoder());
                 pipeline.addLast("encoder", new StringEncoder());
 
