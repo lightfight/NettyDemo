@@ -53,6 +53,11 @@ public class Server {
             }
         });
 
+        // 设置相关参数
+        bootstrap.setOption("child.tcpNoDelay", true);
+        // 设置相关参数
+        bootstrap.setOption("child.keepAlive", true);
+
         // 开放8000端口供客户端访问。
         bootstrap.bind(new InetSocketAddress(8000));
     }
