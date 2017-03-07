@@ -8,6 +8,14 @@
     <artifactId>gameclient</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <repositories>
+        <repository>
+            <id>maven.net.cn</id>
+            <name>one of the central mirrors in china</name>
+            <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+        </repository>
+    </repositories>
+
 
     <dependencies>
 
@@ -21,7 +29,7 @@
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
-            <version>2.5.0</version>
+            <version>3.1.0</version>
         </dependency>
 
 

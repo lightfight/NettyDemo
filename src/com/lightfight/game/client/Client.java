@@ -1,6 +1,6 @@
-package com.tsixi.game.client;
+package com.lightfight.game.client;
 
-import com.tsixi.game.client.handler.ClientHandler;
+import com.lightfight.game.client.handler.ClientHandler;
 import org.jboss.netty.bootstrap.ClientBootstrap;
 import org.jboss.netty.channel.*;
 import org.jboss.netty.channel.socket.nio.NioClientSocketChannelFactory;

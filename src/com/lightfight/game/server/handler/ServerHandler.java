@@ -1,4 +1,4 @@
-package com.tsixi.game.server.handler;
+package com.lightfight.game.server.handler;
 
 import org.jboss.netty.channel.*;
 

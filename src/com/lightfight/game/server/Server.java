@@ -1,6 +1,6 @@
-package com.tsixi.game.server;
+package com.lightfight.game.server;
 
-import com.tsixi.game.server.handler.ServerHandler;
+import com.lightfight.game.server.handler.ServerHandler;
 import org.jboss.netty.bootstrap.ServerBootstrap;
 import org.jboss.netty.channel.ChannelPipeline;
 import org.jboss.netty.channel.ChannelPipelineFactory;
@@ -26,14 +26,14 @@ public class Server {
 
     public static void main(String args[]) {
         // Server服务启动器
-        ServerBootstrap server = new ServerBootstrap(
+        ServerBootstrap bootstrap = new ServerBootstrap(
                 new NioServerSocketChannelFactory(
                         Executors.newCachedThreadPool(),
                         Executors.newCachedThreadPool()));
 
 
         // 设置一个处理客户端消息和各种消息事件的类(Handler)
-        server.setPipelineFactory(new ChannelPipelineFactory() {
+        bootstrap.setPipelineFactory(new ChannelPipelineFactory() {
 
             @Override
             public ChannelPipeline getPipeline() throws Exception {
@@ -54,6 +54,6 @@ public class Server {
         });
 
         // 开放8000端口供客户端访问。
-        server.bind(new InetSocketAddress(8000));
+        bootstrap.bind(new InetSocketAddress(8000));
     }
 }
