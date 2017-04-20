@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LogicGameClient.iml" filepath="$PROJECT_DIR$/LogicGameClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../igaming/igaming/igaming.iml" filepath="$PROJECT_DIR$/../igaming/igaming/igaming.iml" />
     </modules>
   </component>
 </project>
